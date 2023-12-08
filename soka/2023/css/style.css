@@ -1,0 +1,507 @@
+
+.wrapper{
+    margin:0 auto;
+    max-width: 1435px;
+    padding:0 20px;
+    position: relative;
+}
+
+header{
+    padding:0px 0 0;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 9999;
+    height: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+    header .wrapper{
+        max-width: 1320px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header .wrapper{
+        max-width: 1140px;
+    }
+}
+
+header .wrapper{
+    padding:0;
+    max-width: 1435px;
+    position: relative;
+    z-index: 999;
+}
+
+.logo-container{
+    display: inline-block;
+    padding:0px 0px 0px 20px;
+    background-color: #fff;
+}
+
+.logo-container::before{
+    position: absolute;
+    height: 100%;
+    display: inline-block;
+    background: #FFF;
+    top: 0;
+    left: -9999px;
+    right: 100%;
+    content: "";
+}
+
+.oblique{
+    display: inline-block;
+    background: #000;
+}
+
+.smu-logo,.bu-logo{
+    padding:5px 0;
+}
+
+.logo-container div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo-side{
+    border-left: 1px solid #122d70;
+    display: inline-block;
+    padding:0px 20px;
+    margin:10px 0 10px 20px;
+    color:#122d70;
+    font-size:12px;
+}
+
+.logo-side strong{
+    display: block;
+    font-size:18px;
+}
+
+#header{
+    background-color: #000;
+}
+
+#header nav{
+    background-color:rgba(112, 112, 112, 0.8);
+    color:white;
+}
+
+#header nav .wrapper{
+    padding:0 20px;
+}
+
+#header nav .wrapper div{
+    margin:0 -20px;
+}
+
+#header nav a{
+    display: inline-block;
+    padding:10px 0px;
+    font-weight: bold;
+    font-size:14px;
+    color:#fff;
+    margin:0 20px;
+}
+
+
+.menu{
+    background-color: #fff;
+}
+.menu a{
+    border-bottom:3px solid transparent;
+}
+.menu a.selected{
+    border-bottom:3px solid #fff;
+}
+
+
+.small{
+    display: none;
+}
+
+.smu-logo img{
+    margin:6px 10px 0 0;
+}
+
+.bu-logo img{
+    margin:5px 0 0;
+    width: 157px;   
+}
+
+.oblique img{
+    width:30px
+}
+
+.small-menu,.small-nav{
+    display: none;
+}
+
+.sosumi{
+    display: flex;
+}
+
+
+.float-right{
+    float:right;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.aboutmt{
+    color: #000; 
+    font-size: 18px; 
+    font-weight: 700;
+}
+
+.aboutmt p:first-child{
+    margin-bottom:10px;
+    font-size:23px;
+}
+.aboutmt p{
+    margin-bottom:0;
+}
+
+
+@media only screen and (max-width: 734px) {
+    .wrapper{
+        max-width: none;
+    }
+    .small{
+        display: inline-block;
+    }
+    .large{
+        display: none;
+    }
+
+    .logo-container{
+        padding-left:0;
+    }
+
+    .smu-logo{
+        padding:2px 0px 5px 12px;
+    }
+
+    .bu-logo{
+        padding:0;
+    }
+
+    .bu-logo img{
+        width: 125px;
+        position: relative;
+        top:0px;
+    }
+
+    .oblique img{
+        width:24px
+    }
+
+    .small-menu{
+        display: block;
+    }
+
+    #maincontainer{
+        padding:64px 0 0;
+        background:#ebebeb;
+    }
+    .menu{
+        display: none;
+    }
+
+    .small-menu{
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top:10px;
+        right:10px;
+        border-radius:10px;
+        padding:9px;
+        z-index: 9999;
+    }
+
+    .small-menu .hamburger{
+        width: 100%;
+        display: block;
+        position: relative;
+        top: 6px;
+        background: #000;
+        height: 3px;
+        border-radius: 10px;
+    }
+    .small-menu .hamburger::before{
+        width: 100%;
+        height: 3px;
+        background-color: #000;   
+        display: block;
+        position: relative;
+        bottom:6px;
+        content:"";
+        transition: transform 0.5s;
+        border-radius: 10px;
+    }
+    .small-menu .hamburger::after{
+        width: 100%;
+        height: 3px;
+        background-color: #000;   
+        display: block;
+        position: relative;
+        bottom:15px;
+        content:"";
+        transition: transform 0.5s,bottom 0.5s;
+        border-radius: 10px;
+    }
+
+    .small-menu.active .hamburger{
+        background-color: transparent;
+    }
+    .small-menu.active .hamburger::before{
+        transform: rotate(-45deg);
+    }
+    .small-menu.active .hamburger::after{
+        transform: rotate(45deg);
+        bottom:9px;
+    }
+
+    #header .small-nav{
+        display: block;
+        left:-100vw;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top:0;
+        background-color: rgba(138, 112, 76, 0.9);
+        transition: left 0.5s;
+        z-index: 999;
+        padding-top:50px;
+    }
+    #header .small-nav.active{
+        left:0;
+    }
+    #header .small-nav a{
+        display: block;
+        border-left:3px solid transparent;
+        color:#fff;
+        margin:0;
+        padding:10px 20px;
+    }
+    #header .small-nav a.selected{
+        border-left:3px solid #fff;
+    }
+}
+
+#about_scroll{
+    position: relative;
+    bottom:120px;
+}
+@media only screen and (max-width: 734px) {
+    #about_scroll{
+        bottom:60px;
+    }
+}
+#schedule_menu_scroll{
+    position:relative; 
+    top:50px
+}
+@media only screen and (max-width: 734px) {
+    #schedule_menu_scroll{
+        top:110px;
+    }
+}
+#speakers_menu_scroll{
+    position: relative;
+}
+@media only screen and (max-width: 734px) {
+    #speakers_menu_scroll{
+        top:70px;
+    }
+}
+.navigation,.small-nav{
+    font-family: "Open Sans";
+}
+
+.bio-button{
+    background: #655dc6; 
+    padding: 10px; 
+    color: white; 
+    margin-top: 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.bio-button:focus{    
+    color:white;
+    text-decoration: none;
+}
+
+.copyright{
+    color: white; 
+    text-align: center; 
+    font-size: 11px; 
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+.copyright span{
+    color:white
+}
+
+.footer .link{
+    font-weight: bold;
+}
+
+.description, .description .details{
+    color: white;
+}
+
+.description h2.details {
+    color:white;
+    font-size:31px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    margin-top: 80px;
+}
+
+.description .details p{
+    font-size: 55px;
+    color: white;
+    font-weight: 300 ;
+    line-height: 3.3rem;
+}
+
+.normal_button{
+    border: 3px solid #fff; 
+    font-weight: 600; 
+    color: #fff;
+    width: 245px;
+    padding:10px 25px;
+    margin:auto 20px;
+    font-size:18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.normal_button:hover{
+    background:black;
+    color:white;
+    text-decoration: none;
+}
+
+.normal_button:visited,.normal_button:focus{
+    color:white;
+    text-decoration: none;
+}
+
+.register_section{
+    background: #655dc6; 
+    margin: 0px auto; 
+    padding: 80px 0;
+}
+
+
+/*Intro paragraph*/
+.about-us .desc p{
+    line-height: 150%;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.modal .modal-content .modal-body p{
+    text-align: justify;
+}
+
+.carousel .carousel-inner .description .details{
+    font-family: "Dosis";
+}
+
+.carousel .carousel-inner .description .details p{
+    display: block;
+}
+
+/*Hero banner*/
+@media only screen and (max-width: 500px) {
+    #home_slider, #home_slider .carousel-inner .fill{
+        min-height: 600px;
+        height: auto;
+    }
+    .description .details p{
+        font-size:40px;
+    }
+    .description h2.details{
+        margin-top:0;
+    }
+}
+
+
+/*Contact Us Section*/
+#contact_menu .container{
+    max-width: 1110px;
+}
+
+@media only screen and (max-width: 768px) {
+    #contact_menu .container{
+        width: auto;
+        margin:0 auto;
+        padding:0;
+        text-align: center;
+    }
+
+    #contact_menu .container .first_title{
+        width:100%;
+    }
+
+
+}
+
+#contact_menu{
+    padding:50px 0;
+}
+
+#contact_menu h5{
+    color: #282828; 
+    font-size: 33px; 
+    letter-spacing: 0px; 
+    font-weight: 600; 
+}
+
+#contact_menu .contact_border{
+    margin-top: 20px;
+    border-bottom: 4px solid #282828;
+    width: 20%;
+    margin-bottom:30px;
+}
+#contact_menu .information_container .information span{
+    color: #151C55;
+}
+
+@media only screen and (max-width: 768px) {
+    #contact_menu .contact_border{
+        margin:20px auto 30px;
+    }
+    #contact_menu .information_container .information span{
+        margin-right:10px;
+    }
+}
+
+
+#contact_menu .information_container{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #contact_menu .information_container{
+        display:block;
+    }
+    #contact_menu .information_container .information{
+        margin:0 0 20px;
+    }
+}
+
+
