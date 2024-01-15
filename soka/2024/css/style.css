@@ -431,6 +431,7 @@ header .wrapper{
     }
     .description .details p{
         font-size:40px;
+        line-height: 38px;
     }
     .description h2.details{
         margin-top:0;

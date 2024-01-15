@@ -505,6 +505,12 @@ background-size: cover;
 
 }
 
+@media only screen and (max-width: 500px) {
+  .eventime_modal .modal-title {
+    line-height: 35px;
+  }
+}
+
 .eventime_modal .contact_icon {
 
     width: 51px;
@@ -7836,6 +7842,12 @@ html{
 /* Hero */
 .button-hero{
   bottom:50px;
+}
+
+@media only screen and (max-width: 500px) {
+  .button-hero{
+    bottom:20px;
+  }
 }
 
 /* About Us */
