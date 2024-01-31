@@ -435,6 +435,7 @@ header .wrapper{
     }
     .description h2.details{
         margin-top:0;
+        margin-bottom:10px;
     }
 }
 
