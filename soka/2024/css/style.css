@@ -507,3 +507,8 @@ header .wrapper{
 }
 
 
+.title-section-header{
+    border-bottom:4px solid #282828;
+    padding-bottom:15px;
+    display: inline-block;
+}
